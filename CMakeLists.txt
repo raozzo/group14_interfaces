@@ -7,15 +7,15 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
-# --- THIS IS THE CRITICAL LINE ---
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
-# --- THIS IS THE OTHER CRITICAL LINE ---
+# generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/Apples.srv"
+  "msg/Table.msg" 
+  "msg/TablesArray.msg"
+  DEPENDENCIES std_msgs geometry_msgs
 )
 
 

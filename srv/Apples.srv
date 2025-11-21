@@ -1,7 +1,0 @@
-# Service for ex4 
-# Request
-int32 current_apples
-int32 burrow_size
----
-# Response (if enough apples ar found)
-bool success
