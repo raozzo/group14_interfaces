@@ -1,0 +1,9 @@
+# Goal definition
+float32 corridor_length_estimate
+---
+# Result definition
+bool corridor_end
+geometry_msgs/PoseStamped current_pose
+---
+# Feedback definition
+float32 distance_traveled
